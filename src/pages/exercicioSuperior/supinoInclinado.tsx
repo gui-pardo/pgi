@@ -20,7 +20,7 @@ const SupinoInclinado: React.FC = () => {
   }
 
   return (
-    <AppLayout title='Autoexame'>
+    <AppLayout title='Supino Inclinado'>
       <IonContent>
         <ContentBox>
           <p>

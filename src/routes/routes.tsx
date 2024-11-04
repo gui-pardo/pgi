@@ -14,9 +14,13 @@ import SupinoInclinado from '../pages/exercicioSuperior/supinoInclinado'
 import SupinoReto from '../pages/exercicioSuperior/supinoReto'
 import RoscaMartelo from '../pages/exercicioSuperior/roscaMartelo'
 import CadeiraExtensora from '../pages/exercicioInferior/cadeiraExtensora'
-import { About, Colaboracoes } from '../pages'
+import { About, Suplementacao, AtividadesCardioVasculares, Nutricao } from '../pages'
 import Stiff from '../pages/exercicioInferior/stiff'
 import MesaFlexora from '../pages/exercicioInferior/mesaFlexora'
+import Login from '../pages/login/login'
+import CriarConta from '../pages/login/criarConta'
+import ElevacaoLateral from '../pages/exercicioSuperior/elevacaoLateral'
+
 
 
 const AppRoutes: React.FC = () => {
@@ -61,8 +65,13 @@ const AppRoutes: React.FC = () => {
         <MesaFlexora />
       </Route>
 
+      
       <Route path='/exercicio/superior'>
         <ExercicioSuperior />
+      </Route>
+
+      <Route path='/exercicio/superior/elevacao-lateral'>
+        <ElevacaoLateral/>
       </Route>
 
       <Route path='/exercicio/superior/crucifixo-lateral'>
@@ -91,11 +100,26 @@ const AppRoutes: React.FC = () => {
 
        {/* About */}
        <Route path='/sobre'>
-        <About />
-      </Route>
+         <About />
+       </Route>
 
-      <Route path='/colaboracoes'>
-        <Colaboracoes />
+       <Route path='/suplementacao'>
+          <Suplementacao/>
+       </Route>
+
+       <Route path='/atividadeCardioVasculares'>
+          <AtividadesCardioVasculares/>
+       </Route>
+
+       <Route path='/nutricao'>
+          <Nutricao/>
+       </Route>
+
+      <Route path = '/login'>
+          <Login/>
+      </Route>
+      <Route path = '/CriarConta'>
+      <CriarConta/>
       </Route>
     </>
   )

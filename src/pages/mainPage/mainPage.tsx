@@ -49,7 +49,7 @@ export default function MainPage() {
       <Container>
         <Content>
           <Header>
-            <h1>Esse aplicativo não exclui a necessidade da acompanhamento profissional</h1>
+            <h1>Esse aplicativo não exclui a necessidade de acompanhamento profissional</h1>
           </Header>
 
           <WrapperBody>

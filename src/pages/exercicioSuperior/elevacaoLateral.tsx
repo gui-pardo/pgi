@@ -12,9 +12,9 @@ const ContentBox = styled.div`
   color: black;
 `
 
-const AgachamentoUnilateral: React.FC = () => {
+const ElevacaoLateral: React.FC = () => {
   return (
-    <AppLayout title='Agachamento Unilateral'>
+    <AppLayout title='Elevação Lateral'>
       <IonContent>
         <ContentBox>
           <p>
@@ -26,4 +26,4 @@ const AgachamentoUnilateral: React.FC = () => {
   )
 }
 
-export default AgachamentoUnilateral
+export default ElevacaoLateral

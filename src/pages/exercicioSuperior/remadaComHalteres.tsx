@@ -8,7 +8,7 @@ const ContentBox = styled.div`
   border-radius: 10px;
   padding: 20px;
   margin: 40px 20px 20px 20px;
-  color: var(--ion-color-text);
+  color: black;
 `
 
 const Riscos: React.FC = () => {

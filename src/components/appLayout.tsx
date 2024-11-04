@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   IonPage,
   IonHeader,
@@ -6,37 +7,55 @@ import {
   IonMenuButton,
   IonTitle,
   IonContent,
-} from '@ionic/react'
-import { useParams } from 'react-router'
+  IonButton,
+  IonIcon
+} from '@ionic/react';
+import { arrowBackOutline } from 'ionicons/icons';
+import { useParams, useHistory } from 'react-router';
 
-export default function AppLayout({
-  title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) {
-  const { name } = useParams<{ name: string }>()
+interface AppLayoutProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const AppLayout: React.FC<AppLayoutProps> = ({ title, children }) => {
+  const { name } = useParams<{ name: string }>();
+  const history = useHistory();
+
+  const handleGoBack = () => {
+    history.goBack();
+  };
+
+  const handleGoHome = () => {
+    history.push('/home');
+  };
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonButtons slot='start'>
+          <IonButtons slot="start">
             <IonMenuButton />
+            {/* Botão de Voltar com Ícone de Seta */}
+            <IonButton onClick={handleGoBack}>
+              <IonIcon icon={arrowBackOutline} slot="icon-only" />
+            </IonButton>
           </IonButtons>
           <IonTitle>{title}</IonTitle>
+          
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen>
-        <IonHeader collapse='condense'>
+        <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size='large'>GymHelp</IonTitle>
+            <IonTitle size="large">GymHelp</IonTitle>
           </IonToolbar>
         </IonHeader>
         {children}
       </IonContent>
     </IonPage>
-  )
-}
+  );
+};
+
+export default AppLayout;

@@ -48,21 +48,11 @@ const appPages: AppPage[] = [
     url: '/exercicio/inferior',
     iosIcon: barbellOutline,
     mdIcon: barbellSharp,
-  },
+  }
   
-  {
-    title: 'Notícias',
-    url: '/noticias',
-    iosIcon: newspaperOutline,
-    mdIcon: newspaperSharp,
-  },
   
-  {
-    title: 'Sobre',
-    url: '/sobre',
-    iosIcon: helpCircleOutline,
-    mdIcon: helpCircleSharp,
-  },
+  
+  
 ]
 
 // const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']

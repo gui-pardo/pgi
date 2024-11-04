@@ -17,7 +17,7 @@ const MenuItems = styled(IonButton)`
   max-width: 400px;
   justify-content: space-between;
   margin: 15px auto;
-  color: var(--ion-color-primary-text);
+  color: black;
   box-shadow: none;
   transition: background-color 0.3s, transform 0.3s;
 

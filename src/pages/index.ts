@@ -1,7 +1,12 @@
 import { About } from "./About";
-import { Colaboracoes } from "./Colaboracoes";
+import { Suplementacao } from "./Suplementacao";
+import { AtividadesCardioVasculares } from "./AtividadesCardioVasculares";
+import { Nutricao } from "./Nutricao";
 
 export {
     About,
-    Colaboracoes
+    Suplementacao,
+    AtividadesCardioVasculares,
+    Nutricao
+    
 }
