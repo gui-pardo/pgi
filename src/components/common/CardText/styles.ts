@@ -16,5 +16,6 @@ export const WrapperCard = styled.div`
 `
 
 export const Description = styled.div<IDescription>`
-  font-size: ${(element) => element.fontSize};
+  font-size: ${(props) => props.fontSize};
+;
 `
