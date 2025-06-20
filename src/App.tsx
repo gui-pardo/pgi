@@ -1,62 +1,50 @@
+import React from 'react';
 import {
   IonApp,
   IonRouterOutlet,
   IonSplitPane,
   setupIonicReact
-} from '@ionic/react'
-import { IonReactRouter } from '@ionic/react-router'
-import AppRoutes from './routes/routes'
-import { FirebaseProvider } from './firebasContext'
+} from '@ionic/react';
+import { IonReactRouter } from '@ionic/react-router';
+import Menu from './components/Menu';
+import AppRoutes from './routes/routes';
+import { FirebaseProvider } from './firebasContext';
 
-import Menu from './components/Menu'
+/* CSS Ionic necessário */
+import '@ionic/react/css/core.css';
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
+import '@ionic/react/css/padding.css';
+import '@ionic/react/css/float-elements.css';
+import '@ionic/react/css/text-alignment.css';
+import '@ionic/react/css/text-transformation.css';
+import '@ionic/react/css/flex-utils.css';
+import '@ionic/react/css/display.css';
 
-/* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css'
+/* Tema */
+import '@ionic/react/css/palettes/dark.system.css';
+import './theme/variables.css';
 
-/* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css'
-import '@ionic/react/css/structure.css'
-import '@ionic/react/css/typography.css'
-
-/* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css'
-import '@ionic/react/css/float-elements.css'
-import '@ionic/react/css/text-alignment.css'
-import '@ionic/react/css/text-transformation.css'
-import '@ionic/react/css/flex-utils.css'
-import '@ionic/react/css/display.css'
-
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css'
-
-/* Theme variables */
-import './theme/variables.css'
-
-setupIonicReact()
+setupIonicReact();
 
 const App: React.FC = () => {
   return (
     <FirebaseProvider>
       <IonApp>
         <IonReactRouter>
-          <IonSplitPane contentId='main'>
+          <IonSplitPane contentId="main">
+            {/* Menu lateral fixo */}
             <Menu />
-            <IonRouterOutlet id='main'>
+            {/* Área de conteúdo que renderiza as rotas */}
+            <IonRouterOutlet id="main">
               <AppRoutes />
             </IonRouterOutlet>
           </IonSplitPane>
         </IonReactRouter>
       </IonApp>
     </FirebaseProvider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
