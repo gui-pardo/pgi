@@ -34,7 +34,7 @@ const MesaFlexora: React.FC = () => {
     <AppLayout title='Mesa Flexora'>
       <IonContent>
         <ContentBox>
-        <p>Leg press </p>
+        <p>Mesa flexora </p>
         <StyledImage src='/assets/images/mesa flexora.gif' alt='mesa flexora' />
         </ContentBox>
       </IonContent>

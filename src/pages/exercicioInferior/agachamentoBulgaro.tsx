@@ -35,7 +35,7 @@ const AgachamentoBulgaro: React.FC = () => {
     <AppLayout title='Agachamento Bulgaro'>
       <IonContent>
         <ContentBox>
-        <p>Agachamento barra solal</p>
+        <p>Agachamento Búlgaro</p>
         <StyledImage src='/assets/images/agachamento-bulgaro.gif' alt='agachamento bulgaro' />
         </ContentBox>
       </IonContent>

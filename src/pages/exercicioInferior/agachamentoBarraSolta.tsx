@@ -34,7 +34,7 @@ const AgachamentoBarraSolta: React.FC = () => {
     <AppLayout title='Agachamento Barra solta'>
       <IonContent>
       <ContentBox>
-        <p>Agachamento barra solal</p>
+        <p>Agachamento barra solta</p>
         <StyledImage src='/assets/images/agachamento-barra-solta.gif' alt='agachamento barra solta' />
         </ContentBox>
       </IonContent>

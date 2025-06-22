@@ -35,7 +35,7 @@ const AgachamentoUnilateral: React.FC = () => {
     <AppLayout title='Agachamento Unilateral'>
       <IonContent>
         <ContentBox>
-        <p>Agachamento Afundo com Halteres </p>
+        <p>Agachamento Avanço com Halteres </p>
         <StyledImage src='/assets/images/agachamento-afundo-com-halteres.webp' alt='Agachamneto afundo' />
 
           

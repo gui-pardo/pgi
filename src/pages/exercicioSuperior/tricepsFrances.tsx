@@ -33,7 +33,7 @@ const TricepsFrances: React.FC = () => {
     <AppLayout title='Tríceps'>
       <IonContent>
         <ContentBox>
-          <p>Tríceps Francês na Polia Alta</p>
+          <p>Tríceps Testa na Polia </p>
           <StyledImage
             src='/assets/images/Triceps-frances-polia.gif'
             alt='triceps frances na polia'
@@ -45,7 +45,7 @@ const TricepsFrances: React.FC = () => {
             alt='triceps frances na polia'
           />
 
-          <p>Tríceps na Polia Baixa</p>
+          <p>Tríceps Francês na Polia </p>
           <StyledImage
             src='/assets/images/triceps-frances-na-polia-baixa-no-cross.gif'
             alt='triceps frances na polia'
