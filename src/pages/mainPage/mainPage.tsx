@@ -1,5 +1,6 @@
 import { IonCol, IonGrid, IonRow, IonToast } from '@ionic/react'
 import AppLayout from '../../components/appLayout'
+import { Analytics } from "@vercel/analytics/next"
 
 import {
   Container,
