@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-
 import {
   IonApp,
   IonRouterOutlet,
@@ -8,9 +7,11 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import { useLocation } from 'react-router-dom';
 import Menu from './components/Menu';
 import AppRoutes from './routes/routes';
 import { FirebaseProvider } from './firebasContext';
+import { initGA, trackPageview } from './analytics';
 
 /* CSS Ionic necessário */
 import '@ionic/react/css/core.css';
@@ -31,6 +32,17 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => {
+  const location = useLocation();
+  const GA_ID = import.meta.env.VITE_GA_ID;
+
+  useEffect(() => {
+    if (GA_ID) initGA(GA_ID);
+  }, [GA_ID]);
+
+  useEffect(() => {
+    trackPageview(location.pathname + location.search);
+  }, [location]);
+
   return (
     <FirebaseProvider>
       <IonApp>
