@@ -1,5 +1,5 @@
 import React from 'react';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 
 import {
   IonApp,
@@ -28,6 +28,7 @@ import '@ionic/react/css/display.css';
 import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 
+setupIonicReact();
 
 const App: React.FC = () => {
   return (
@@ -35,15 +36,13 @@ const App: React.FC = () => {
       <IonApp>
         <IonReactRouter>
           <IonSplitPane contentId="main">
-            {/* Menu lateral fixo */}
             <Menu />
-             <Analytics />
-            {/* Área de conteúdo que renderiza as rotas */}
             <IonRouterOutlet id="main">
               <AppRoutes />
             </IonRouterOutlet>
           </IonSplitPane>
         </IonReactRouter>
+        <Analytics />
       </IonApp>
     </FirebaseProvider>
   );
